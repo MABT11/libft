@@ -6,7 +6,7 @@
 /*   By: mbin <mbin@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/24 22:06:13 by mbin              #+#    #+#             */
-/*   Updated: 2021/12/24 23:22:25 by mbin             ###   ########.fr       */
+/*   Updated: 2021/12/26 20:20:26 by mbin             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,11 +51,15 @@ void	ft_putstr_fd(char *str, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int nb,int fd);
 char **ft_split(char const *s, char c);
-
+char *ft_itoa(int n);
+char *ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void ft_striteri(char *s, void (*f)(unsigned int, char*));
 
 /*BONUS*/
-typedef struct s_list {
-	void *content;/* allows to store any kind of data*/
+
+typedef struct s_list
+{
+	void *content;		/* allows to store any kind of data*/
 	struct s_list *next; /* the next element if nothing it should point to NULL*/
 }				t_list;
 /*

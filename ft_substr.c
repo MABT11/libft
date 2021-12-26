@@ -6,7 +6,7 @@
 /*   By: mbin <mbin@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/22 18:09:27 by mbin              #+#    #+#             */
-/*   Updated: 2021/12/24 21:31:59 by mbin             ###   ########.fr       */
+/*   Updated: 2021/12/26 15:23:39 by mbin             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,8 @@ static char	*case3(char const *s, unsigned int start, size_t len)
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
+	if(!s)
+		return (NULL);
 	if (ft_strlen(s) < start)
 	{
 		return (case1 ());

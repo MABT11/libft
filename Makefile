@@ -15,17 +15,23 @@ SRC=ft_isascii.c ft_memmove.c ft_strlcpy.c ft_substr.c ft_atoi.c \
 	ft_memchr.c ft_strdup.c ft_strncpy.c ft_isalnum.c ft_memcmp.c \
 	ft_strjoin.c ft_strnstr.c ft_isalpha.c ft_memcpy.c ft_strlcat.c \
 	ft_strrchr.c ft_putendl_fd.c ft_putstr_fd.c ft_putchar_fd.c \
-	ft_putnbr_fd.c ft_strmapi.c ft_split.c
+	ft_putnbr_fd.c ft_strmapi.c ft_split.c ft_itoa.c ft_strmapi.c ft_striteri.c \
+	ft_ft_lstnew.c
 # it will exc all which will change all .c to .o files
 OBJECT=$(SRC:.c=.o)
 
+BOUNS_SRC = ft_lstnew.c ft_lstsize.c
+BOUNS = bouns
 
 all: $(NAME)
 
-$(NAME): $(OBJECT)
+$(NAME): $(OBJECT) $(BOUNS)
 	ar -c -r -s $@ $^
 
 %.o: %.c
+	$(CC) $(CFLAGS) -g3 -c $< -o $@
+
+$(BOUNS): $(BOUNS_SRC:.c=.o)
 	$(CC) $(CFLAGS) -g3 -c $< -o $@
 
 clean:
