@@ -20,13 +20,17 @@
  * @param new
  * @return *void
  */
-
+/*DONE*/
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	new->next = *lst;
-	new = ft_lstlast(new);
-	if(new->next == NULL)
+	t_list	*temp;
+
+	if (!*lst)
 	{
-		new = new->next;
+		*lst = new;
+		return ;
 	}
+	temp = *lst;
+	temp = ft_lstlast(*lst);
+	temp->next = new;
 }

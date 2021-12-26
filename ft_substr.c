@@ -15,9 +15,7 @@
 static char	*case1(void)
 {
 	char	*p;
-	size_t	i;
 
-	i = 0;
 	p = (char *)malloc(sizeof(char));
 	if (p == NULL)
 		return (NULL);
