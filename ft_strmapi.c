@@ -12,10 +12,10 @@
 
 #include "libft.h"
 
-char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
+char    *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-    unsigned int  i;
-    char    *p;
+    unsigned int    i;
+    char            *p;
 
     if (!(p = ft_strdup(s)))
         return (NULL);

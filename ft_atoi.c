@@ -15,7 +15,7 @@
 int	ft_atoi(const char *str)
 {
 	size_t	i;
-	long		num;
+	long	num;
 	int		sign;
 
 	num = 0;
@@ -31,9 +31,9 @@ int	ft_atoi(const char *str)
 	}
 	while (ft_isdigit(str[i]))
 		num = (num * 10) + (str[i++] - '0');
-	if (num>2147483647&&sign==1)
+	if (num > 2147483647 && sign == 1)
 		return (-1);
-	else if (num>2147483648&&sign==-1)
-		return(0);
-	return ((int)num*sign);
+	else if (num > 2147483648 && sign == -1)
+		return (0);
+	return ((int)num * sign);
 }

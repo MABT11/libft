@@ -63,7 +63,7 @@ static char	*case3(char const *s, unsigned int start, size_t len)
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	if(!s)
+	if (!s)
 		return (NULL);
 	if (ft_strlen(s) < start)
 	{

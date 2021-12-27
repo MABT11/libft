@@ -28,8 +28,8 @@ void	ft_putnbr_fd(int nb,int fd)
 	if (nb > 9)
 	{
 		ft_putnbr_fd(nb / 10, fd);
-		ft_putchar_fd((char) (nb % 10 + 48), fd);
+		ft_putchar_fd((char)(nb % 10 + 48), fd);
 	}
 	else
-		ft_putchar_fd((char)nb + 48,fd);
+		ft_putchar_fd((char)nb + 48, fd);
 }
